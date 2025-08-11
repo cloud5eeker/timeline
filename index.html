@@ -5,21 +5,12 @@
   <title>My Timeline</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    /* --- Your custom look & feel overrides --- */
     /* Bigger nav area so labels have room */
     .tl-timenav { height: 240px; }
-
     /* Make nav text a bit larger */
     .tl-timenav { font-size: 16px; }
-
     /* Make slide title bigger/bolder */
     .tl-slide-title { font-size: 34px; line-height: 1.15; font-weight: 700; }
-
-    /* If you want even bigger group/category labels,
-       inspect element in your browser and adjust the selector here */
-    /* Example (may vary by build):
-    .tl-timenav .tl-group-label { font-size: 18px; font-weight: 700; }
-    */
   </style>
 </head>
 <body>
@@ -32,14 +23,14 @@
       initial_zoom: 2,
       timenav_position: 'bottom',
       timenav_height: 240,
-      hash_bookmark: true,       // deep-link to a specific slide
+      hash_bookmark: true,
       start_at_slide: 0,
-      font: 'default',           // try 'pt', 'fjalla-average', 'montserrat', etc.
+      font: 'default',
       default_bg_color: '#ffffff'
     };
 
-    // Use your *published-to-web* sheet URL (ends with /pubhtml)
-    const dataSource = 'data/imelineJS_Updated_Template - Sheet1.csv';
+    // CSV file from your GitHub Pages repo
+    const dataSource = 'https://cloud5eeker.github.io/timeline/TimelineJS_Updated_Template%20-%20Sheet1.csv';
 
     new TL.Timeline('timeline', dataSource, options);
   </script>
