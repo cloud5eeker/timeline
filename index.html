@@ -7,9 +7,7 @@
   <style>
     /* Bigger nav area so labels have room */
     .tl-timenav { height: 240px; }
-    /* Make nav text a bit larger */
     .tl-timenav { font-size: 16px; }
-    /* Make slide title bigger/bolder */
     .tl-slide-title { font-size: 34px; line-height: 1.15; font-weight: 700; }
   </style>
 </head>
@@ -29,8 +27,8 @@
       default_bg_color: '#ffffff'
     };
 
-    // CSV file from your GitHub Pages repo
-    const dataSource = 'https://cloud5eeker.github.io/timeline/TimelineJS_Updated_Template%20-%20Sheet1.csv';
+    // Published Google Sheet URL
+    const dataSource = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTmhJFxUqc28W486h2SHeQiD9v_X6V1_srY6bbx6F_o7yVBdsHPtbXV7e9wRCzZgboHCEA7hfwGC0PV/pubhtml';
 
     new TL.Timeline('timeline', dataSource, options);
   </script>
