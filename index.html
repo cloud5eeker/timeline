@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>My Timeline</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    /* --- Your custom look & feel overrides --- */
+    /* Bigger nav area so labels have room */
+    .tl-timenav { height: 240px; }
+
+    /* Make nav text a bit larger */
+    .tl-timenav { font-size: 16px; }
+
+    /* Make slide title bigger/bolder */
+    .tl-slide-title { font-size: 34px; line-height: 1.15; font-weight: 700; }
+
+    /* If you want even bigger group/category labels,
+       inspect element in your browser and adjust the selector here */
+    /* Example (may vary by build):
+    .tl-timenav .tl-group-label { font-size: 18px; font-weight: 700; }
+    */
+  </style>
+</head>
+<body>
+  <div id="timeline" style="width:100%;max-width:1100px;margin:0 auto;height:700px;"></div>
+
+  <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+  <script>
+    const options = {
+      language: 'en',
+      initial_zoom: 2,
+      timenav_position: 'bottom',
+      timenav_height: 240,
+      hash_bookmark: true,       // deep-link to a specific slide
+      start_at_slide: 0,
+      font: 'default',           // try 'pt', 'fjalla-average', 'montserrat', etc.
+      default_bg_color: '#ffffff'
+    };
+
+    // Use your *published-to-web* sheet URL (ends with /pubhtml)
+    const dataSource = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTmhJFxUqc28W486h2SHeQiD9v_X6V1_srY6bbx6F_o7yVBdsHPtbXV7e9wRCzZgboHCEA7hfwGC0PV/pubhtmlE';
+
+    new TL.Timeline('timeline', dataSource, options);
+  </script>
+</body>
+</html>
